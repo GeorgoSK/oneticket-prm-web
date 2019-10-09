@@ -1,4 +1,56 @@
 //out: style.css
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'San Francisco', Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: rgb(33,33,33);
+}
+
+#search-results {
+    padding: 0.5em;
+    background-color: rgb(240,240,240);
+    article {
+        border: 1px solid green;
+        padding: 0 0.5em;
+        .connection-intro {
+            display: flex;
+            justify-content: space-between;
+            time {
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li {
+                display: table-row;
+                & > * {
+                    margin-right: 0.5em;
+                }
+            }
+        }
+        div {
+            padding: 0.2em 1em;
+            margin: 0.5em 0;
+            &:not(:last-of-type) {
+                border-bottom: 1px solid rgb(220,220,220);
+            }
+            &:empty {
+                display: none;
+            }
+            .service {
+                font-weight: bold;
+            }
+            p {
+                margin: 0.1em 0;
+            }
+        }
+    }
 }

@@ -1,3 +1,53 @@
 * {
   box-sizing: border-box;
 }
+body {
+  font-family: 'Segoe UI', 'San Francisco', Tahoma, Geneva, sans-serif;
+  font-size: 18px;
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #212121;
+}
+#search-results {
+  padding: 0.5em;
+  background-color: #f0f0f0;
+}
+#search-results article {
+  border: 1px solid green;
+  padding: 0 0.5em;
+}
+#search-results article .connection-intro {
+  display: flex;
+  justify-content: space-between;
+}
+#search-results article .connection-intro time {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+#search-results article ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#search-results article ul li {
+  display: table-row;
+}
+#search-results article ul li > * {
+  margin-right: 0.5em;
+}
+#search-results article div {
+  padding: 0.2em 1em;
+  margin: 0.5em 0;
+}
+#search-results article div:not(:last-of-type) {
+  border-bottom: 1px solid #dcdcdc;
+}
+#search-results article div:empty {
+  display: none;
+}
+#search-results article div .service {
+  font-weight: bold;
+}
+#search-results article div p {
+  margin: 0.1em 0;
+}
