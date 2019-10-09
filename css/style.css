@@ -10,9 +10,10 @@ body {
 }
 #search-results {
   padding: 0.5em;
-  background-color: #f0f0f0;
+  background-color: #fafafa;
 }
 #search-results article {
+  margin: 1em 0;
   border: 1px solid green;
   padding: 0 0.5em;
 }
@@ -45,9 +46,21 @@ body {
 #search-results article div:empty {
   display: none;
 }
+#search-results article div.action {
+  display: flex;
+  justify-content: flex-end;
+}
 #search-results article div .service {
   font-weight: bold;
 }
 #search-results article div p {
   margin: 0.1em 0;
+}
+button {
+  background-color: green;
+  padding: 0.7em 1em;
+  cursor: pointer;
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
