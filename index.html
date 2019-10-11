@@ -8,15 +8,24 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <section id="search-inputs">
+        <div class="main">
+            <span>Z<input type="text" size="20" name="from" value="Rožnov pod Radhoštěm"></span>
+            <span>Do<input type="text" size="20" name="to" value="Brno-Židenice"></span>
+            <span>Datum<input type="text" size="8" name="date" value="15. 10. 2019"></span>
+            <span>Čas<input type="text" size="4" name="date" value="15:30"></span>
+            <button type="submit">Najít spojení</button>
+        </div>
+    </section>
     <section id="search-results">
-        <p>Úterý 15. října 2019</p>
+        <p class="date-header">Úterý <time datetime="2019-10-15">15. října 2019</time></p>
         <article>
             <p class="connection-intro">
                 <span>odjezd <time class="trip-departure">15:56</time></span>
                 <span>cestovní čas <time datetime="2h 54m">2 h 54 min</time></span>
             </p>
             <div class="segment">
-                <p class="service train">Os 13212</p>
+                <p class="service train">Os 13212<span class="carrier carrier-arr">Arriva vlaky</span></p>
                 <ul>
                     <li>
                         <time class="time-dep">15:56</time>
@@ -35,7 +44,7 @@
                 <p>Při vyřizování vaší objednávky dopravce upozorníme na nutnost asistence ve stanici.</p>
             </div>
             <div class="segment">
-                <p class="service train">Os 3210</p>
+                <p class="service train">Os 3210<span class="carrier carrier-cd">České dráhy</span></p>
                 <ul>
                     <li>
                         <time class="time-dep">16:20</time>
@@ -51,7 +60,7 @@
             </div>
             <div class="transfer"></div>
             <div class="segment">
-                <p class="service train">R 830</p>
+                <p class="service train">R 830<span class="carrier carrier-rj">RegioJet</span></p>
                 <ul>
                     <li>
                         <time class="time-dep">17:15</time>
@@ -76,7 +85,7 @@
                     <span>cestovní čas <time datetime="2h 50m">2 h 50 min</time></span>
                 </p>
                 <div class="segment">
-                    <p class="service train">Os 3920</p>
+                    <p class="service train">Os 3920<span class="carrier carrier-cd">České dráhy</span></p>
                     <ul>
                         <li>
                             <time class="time-dep">18:00</time>
@@ -95,7 +104,7 @@
                     <p>Při vyřizování vaší objednávky dopravce upozorníme na nutnost asistence ve stanici.</p>
                 </div>
                 <div class="segment">
-                    <p class="service train">R 820</p>
+                    <p class="service train">R 820<span class="carrier carrier-rj">RegioJet</span></p>
                     <ul>
                         <li>
                             <time class="time-dep">19:52</time>

@@ -8,14 +8,50 @@ body {
   margin: 0 auto;
   background-color: #212121;
 }
+#search-inputs {
+  padding: 0.5em 0;
+  width: 100vw;
+  background-color: #4d4d21;
+  position: relative;
+  margin-left: 50%;
+  left: -50vw;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+}
+#search-inputs div {
+  width: 960px;
+  display: flex;
+}
+#search-inputs div span {
+  background-color: white;
+  margin-right: 1em;
+  padding: 0.5em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+#search-inputs div span input {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 0.2em;
+  border: 0;
+}
 #search-results {
   padding: 0.5em;
-  background-color: #fafafa;
+  background-color: #f0f4f0;
+}
+#search-results p.date-header {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  font-weight: lighter;
+  opacity: 0.8;
 }
 #search-results article {
   margin: 1em 0;
-  border: 1px solid green;
+  border: 1px solid #5a5a5a;
   padding: 0 0.5em;
+  background-color: #ffffff;
 }
 #search-results article .connection-intro {
   display: flex;
@@ -24,6 +60,11 @@ body {
 #search-results article .connection-intro time {
   font-size: 1.1em;
   font-weight: bold;
+}
+#search-results article p.connection-intro {
+  margin: 0.5em 0;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #abac18;
 }
 #search-results article ul {
   list-style-type: none;
@@ -37,8 +78,7 @@ body {
   margin-right: 0.5em;
 }
 #search-results article div {
-  padding: 0.2em 1em;
-  margin: 0.5em 0;
+  padding: 0.3em 1em;
 }
 #search-results article div:not(:last-of-type) {
   border-bottom: 1px solid #dcdcdc;
@@ -50,14 +90,29 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+#search-results article div.transfer {
+  font-size: 0.8em;
+  padding-left: 2em;
+  color: orangered;
+}
 #search-results article div .service {
   font-weight: bold;
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+}
+#search-results article div .service span.carrier {
+  margin-left: 1em;
+  padding: 0 0.5em;
+  font-weight: 400;
+  width: 120px;
 }
 #search-results article div p {
   margin: 0.1em 0;
 }
 button {
-  background-color: green;
+  background-color: #abac18;
+  font-size: 1em;
   padding: 0.7em 1em;
   cursor: pointer;
   color: white;
