@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PRM prototyp</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="application/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="application/javascript">
+    $(document).ready(() => {
+        $('#search-results').on('click', function() {$(this).slideUp()});
+    });    
+    </script>
 </head>
 <body>
     <section id="search-inputs">
@@ -25,7 +31,7 @@
                 <span>cestovní čas <time datetime="2h 54m">2 h 54 min</time></span>
             </p>
             <div class="segment">
-                <p class="service train">Os 13212<span class="carrier carrier-arr">Arriva vlaky</span></p>
+                <p class="service train carrier-arr"><span class="line">Os 13212</span><span class="carrier">Arriva vlaky</span></p>
                 <ul>
                     <li>
                         <time class="time-dep">15:56</time>
@@ -40,11 +46,16 @@
                 </ul>
             </div>
             <div class="transfer">
-                <p class="warning">Pozor, krátký přestup!</p>
-                <p>Při vyřizování vaší objednávky dopravce upozorníme na nutnost asistence ve stanici.</p>
+                <div class="message warn">
+                    <p class="warning">Pozor, krátký přestup!</p>
+                    <p>Při vyřizování vaší objednávky dopravce upozorníme na nutnost asistence ve stanici.</p>
+                </div>
+                <div class="action">
+                    <button>Najít pozdější přípoj</button>
+                </div>
             </div>
             <div class="segment">
-                <p class="service train">Os 3210<span class="carrier carrier-cd">České dráhy</span></p>
+                <p class="service train carrier-cd"><span class="line">Os 3210</span><span class="carrier">České dráhy</span></p>
                 <ul>
                     <li>
                         <time class="time-dep">16:20</time>
@@ -60,7 +71,7 @@
             </div>
             <div class="transfer"></div>
             <div class="segment">
-                <p class="service train">R 830<span class="carrier carrier-rj">RegioJet</span></p>
+                <p class="service train carrier-rj"><span class="line">R 830</span><span class="carrier">RegioJet</span></p>
                 <ul>
                     <li>
                         <time class="time-dep">17:15</time>
@@ -85,7 +96,7 @@
                     <span>cestovní čas <time datetime="2h 50m">2 h 50 min</time></span>
                 </p>
                 <div class="segment">
-                    <p class="service train">Os 3920<span class="carrier carrier-cd">České dráhy</span></p>
+                    <p class="service train carrier-cd"><span class="line">Os 3920</span><span class="carrier">České dráhy</span></p>
                     <ul>
                         <li>
                             <time class="time-dep">18:00</time>
@@ -100,11 +111,16 @@
                     </ul>
                 </div>
                 <div class="transfer">
+                    <div class="message warn">
                     <p class="warning">Pozor, krátký přestup!</p>
                     <p>Při vyřizování vaší objednávky dopravce upozorníme na nutnost asistence ve stanici.</p>
+                    </div>
+                    <div class="action">
+                        <button>Najít pozdější přípoj</button>
+                    </div>
                 </div>
                 <div class="segment">
-                    <p class="service train">R 820<span class="carrier carrier-rj">RegioJet</span></p>
+                    <p class="service train carrier-rj"><span class="line">R 820</span><span class="carrier">RegioJet</span></p>
                     <ul>
                         <li>
                             <time class="time-dep">19:52</time>

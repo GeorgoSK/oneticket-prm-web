@@ -56,66 +56,85 @@ body {
 #search-results article .connection-intro {
   display: flex;
   justify-content: space-between;
+  margin: 0.5em 0;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #abac18;
 }
 #search-results article .connection-intro time {
   font-size: 1.1em;
   font-weight: bold;
 }
-#search-results article p.connection-intro {
-  margin: 0.5em 0;
-  padding-bottom: 0.2em;
-  border-bottom: 1px solid #abac18;
-}
 #search-results article ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0.2em 0;
 }
 #search-results article ul li {
-  display: table-row;
+  padding-left: 1.4em;
 }
 #search-results article ul li > * {
-  margin-right: 0.5em;
+  margin-right: 1.5em;
 }
-#search-results article div {
-  padding: 0.3em 1em;
-}
-#search-results article div:not(:last-of-type) {
+#search-results article > div:not(:last-of-type):not(:empty) {
   border-bottom: 1px solid #dcdcdc;
 }
-#search-results article div:empty {
-  display: none;
+#search-results article div {
+  padding: 0.3em;
 }
 #search-results article div.action {
   display: flex;
   justify-content: flex-end;
 }
 #search-results article div.transfer {
+  display: flex;
+  justify-content: space-between;
   font-size: 0.8em;
   padding-left: 2em;
   color: orangered;
 }
-#search-results article div .service {
-  font-weight: bold;
-  width: 240px;
-  display: flex;
-  justify-content: space-between;
+#search-results article div .service:before {
+  display: inline-block;
+  content: "";
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: 2px;
+  margin-right: 0.5em;
 }
-#search-results article div .service span.carrier {
-  margin-left: 1em;
+#search-results article div .service .line {
+  font-weight: bold;
+}
+#search-results article div .service .carrier {
+  display: block;
+  margin-left: 1.5em;
+  font-size: 0.8rem;
   padding: 0 0.5em;
   font-weight: 400;
-  width: 120px;
 }
 #search-results article div p {
   margin: 0.1em 0;
 }
 button {
-  background-color: #abac18;
   font-size: 1em;
   padding: 0.7em 1em;
   cursor: pointer;
   color: white;
   border: none;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.next-step button {
+  background-color: #abac18;
+}
+.transfer button {
+  background-color: transparent;
+  border: 1px solid orangered;
+  color: orangered;
+}
+.carrier-cd:before {
+  background-color: #009fda;
+}
+.carrier-arr:before {
+  background-color: #00becd;
+}
+.carrier-rj:before {
+  background-color: #fbc901;
 }
