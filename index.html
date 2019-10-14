@@ -7,11 +7,7 @@
     <title>PRM prototyp</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="application/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="application/javascript">
-    $(document).ready(() => {
-        $('#search-results').on('click', function() {$(this).slideUp()});
-    });    
-    </script>
+    <script type="application/javascript" src="js/scripts.js"></script>
 </head>
 <body>
     <section id="search-inputs">
@@ -20,7 +16,7 @@
             <span>Do<input type="text" size="20" name="to" value="Brno-Židenice"></span>
             <span>Datum<input type="text" size="8" name="date" value="15. 10. 2019"></span>
             <span>Čas<input type="text" size="4" name="date" value="15:30"></span>
-            <button type="submit">Najít spojení</button>
+            <button type="submit" class="search">Najít spojení</button>
         </div>
     </section>
     <section id="search-results">

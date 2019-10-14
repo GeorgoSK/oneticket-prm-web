@@ -13,18 +13,24 @@ body {
     max-width: 960px;
     margin: 0 auto;
     background-color: rgb(33,33,33);
+    overflow-x: hidden;
 }
 
 #search-inputs {    
     padding: 0.5em 0;
     width: 100vw;
     background-color: @sjt-dark;
-    position: relative;
+    position: fixed;
+    z-index: 2;
+    top: 0;
     margin-left: 50%;
     left: -50vw;
     box-shadow: 1px 0 5px rgba(0,0,0,0.5);
     display: flex;
     justify-content: center;
+    &.fixed {
+        position: fixed;
+    }
     div {
         width: 960px;
         display: flex;
@@ -45,6 +51,7 @@ body {
 }
 
 #search-results {
+    margin-top: 75px;
     padding: 0.5em;
     background-color: rgb(240,244,240);
     p.date-header {
@@ -131,11 +138,13 @@ button {
     cursor: pointer;
     color: white;
     border: none;
+    background-color: rgb(33,33,33);
 }
 
-.next-step button {
+.next-step button, .search {
     background-color: @sjt-light;
 }
+ 
 .transfer button {
     background-color: transparent;
     border: 1px solid orangered;

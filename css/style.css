@@ -7,17 +7,23 @@ body {
   max-width: 960px;
   margin: 0 auto;
   background-color: #212121;
+  overflow-x: hidden;
 }
 #search-inputs {
   padding: 0.5em 0;
   width: 100vw;
   background-color: #4d4d21;
-  position: relative;
+  position: fixed;
+  z-index: 2;
+  top: 0;
   margin-left: 50%;
   left: -50vw;
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
+}
+#search-inputs.fixed {
+  position: fixed;
 }
 #search-inputs div {
   width: 960px;
@@ -37,6 +43,7 @@ body {
   border: 0;
 }
 #search-results {
+  margin-top: 75px;
   padding: 0.5em;
   background-color: #f0f4f0;
 }
@@ -120,8 +127,10 @@ button {
   cursor: pointer;
   color: white;
   border: none;
+  background-color: #212121;
 }
-.next-step button {
+.next-step button,
+.search {
   background-color: #abac18;
 }
 .transfer button {
