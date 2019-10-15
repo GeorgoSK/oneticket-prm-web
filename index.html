@@ -25,7 +25,7 @@
     <section id="search-results">
         <div class="results-header">
         <p class="date-header">Úterý <time datetime="2019-10-15">15. října 2019</time></p>
-        <p><input type="checkbox" id="toggle-recommended"><label for="toggle-recommended"></label> doporučené spoje</p>
+        <p><input type="checkbox" id="toggle-recommended"><label for="toggle-recommended">doporučené spoje</label></p>
         </div>
         <article>
             <p class="connection-intro">
@@ -186,16 +186,87 @@
                 <div class="train-selection">
                     <h3>Vyberte spoj:</h3>
                     <ul>
-                        <li><time>19:53</time><span class="service-no">R 824</span><span class="carrier carrier-rj">RegioJet</span><span class="notice">Pozor, velmi krátký přestup</span><button>Vybrat spoj</button></li>
+                        <li><time>19:53</time><span class="service-no">R 824</span><span
+                                class="carrier carrier-rj">RegioJet</span><span class="notice">Pozor, velmi krátký přestup <i class="fas fa-question-circle"></i></span><button>Vybrat spoj</button></li>
                         <li><time>21:53</time><span class="service-no">R 820</span><span class="carrier carrier-rj">RegioJet</span><span class="notice"></span><button>Vybrat spoj</button></li>
                     </ul>
                 </div>
             </div>
         </article>
 
+        <button class="add-segment"><i class="fas fa-plus"></i> Přidat další vlak</button>
+
         <div class="next-step action">
             <button type="button">Potvrdit výběr vlaků</button>
         </div>
+    </section>
+
+    <section id="confirmation">
+        <div class="confirmation-header">
+            <p class="date-header">Potvrzení objednávky</p>
+        </div>
+        <article>
+            <h2 class="connection-intro">Úterý 15. října 2019</h2>
+            <div class="segment">
+                <div class="service-block">
+                    <p class="service train carrier carrier-cd"><span class="line">Os 3920</span><span class="carrier-name">České dráhy</span></p>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <time class="time-dep">18:00</time>
+                            <span class="station">Rožnov pod Radhoštěm</span>
+                            <span class="notes"></span>
+                        </li>
+                        <li>
+                            <time class="time-arr">19:49</time>
+                            <span class="station">Kojetín</span>
+                            <span class="notes"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="segment selected-connection">
+                <div class="service-block">
+                    <p class="service train carrier carrier-rj"><span class="line">R 824</span><span class="carrier-name">RegioJet</span></p>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <time class="time-dep">19:52</time>
+                            <span class="station">Kojetín</span>
+                            <span class="notes"></span>
+                        </li>
+                        <li>
+                            <time class="time-arr">20:50</time>
+                            <span class="station">Brno-Židenice</span>
+                            <span class="notes"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="journey-timer">
+                <h3>Do vaší cesty zbývá 5 dnů</h3>
+                <p>Definitivní odpověď dostanete do 14. 10. 2019 18:00</p>
+            </div>
+            <h2 class="connection-intro">Kontaktní údaje</h2>
+            <div class="contact">
+                <table>
+                    <tr>
+                        <td>Jméno:</td>
+                        <td><input type="text" name="name" value="Václav Krása"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td><input type="email" name="email" value="krasa@cestujici.prm"></td>
+                    </tr>
+                    <tr>
+                        <td>Telefon:</td>
+                        <td><input type="text" name="telefon" value="600 122 221"></td>
+                    </tr>
+                </table>
+            </div>
+        </article>
     </section>
 </body>
 </html>

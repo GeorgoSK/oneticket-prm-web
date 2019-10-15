@@ -7,5 +7,5 @@ $(document).ready(() => {
 		});
 		$('.input-fields input').autocomplete({minLength: 0, source: stationList});
 	});
-	$('#search-results').hide();
+	//$('#search-results').hide();
 });

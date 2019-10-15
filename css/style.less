@@ -1,4 +1,5 @@
 //out: style.css
+@import (once) 'fa.min.css';
 
 @sjt-light: rgb(171,172,24);
 @sjt-dark: rgb(77,77,33);
@@ -79,6 +80,9 @@ h2, h3 {
     border: 1px solid @border;
     padding: 0 0.5em;
     background-color: rgb(255,255,255);
+    .fas {
+        cursor: pointer;
+    }
 }
 .list-clean {
     list-style-type: none;
@@ -93,6 +97,23 @@ h2, h3 {
     .page-container;
     .results-header {
         .container-header;
+        align-items: center;
+    }
+    #toggle-recommended {
+        position: relative;
+        z-index: 2;
+        & + label {
+            display: inline-block;
+            z-index: 1;
+            padding: 0.2em 1em 0.2em 2em;
+            margin-left: -1.5em;
+            background-color: @border-light;
+            transition: all 0.2s ease;
+        }
+        &:checked + label {
+            color: white;
+            background-color: @sjt-light;
+        }
     }
     article {
         .article-style;
@@ -244,10 +265,61 @@ h2, h3 {
             } 
         }
     }
+    .add-segment {
+        background-color: @sjt-dark;
+    }
     .next-step {
         display: flex;
         justify-content: center;
         padding: 1em 0 2em 0;
+    }
+}
+
+#confirmation {
+    .page-container;
+    .confirmation-header {
+        .container-header;
+    }
+    article {
+        .article-style;
+        padding-bottom: 1em;
+        .connection-intro {
+            border-bottom: 1px solid @sjt-light;
+        }
+        div.segment {
+            .carrier:before {
+                .carrier-badge;
+            }
+            p {
+                margin: 0.5em 0;
+            }
+            ul {
+                .list-clean;
+                margin: 0;
+                li {
+                    padding: 0;
+                    time {
+                        margin-right: 1em;
+                    }
+                }
+            }
+            .line {
+                margin-left: 0.33em;
+                margin-right: 1em;
+                font-weight: 600;
+            }
+            .carrier-name {
+                display: block;
+                font-size: 0.9rem;
+                margin-left: 2em;
+            }
+        }
+        .contact {
+            input {
+                font-size: 1.1em;
+                margin: 0.2em;
+            }
+        }
     }
 }
 

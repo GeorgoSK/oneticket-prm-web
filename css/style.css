@@ -1,3 +1,4 @@
+@import 'fa.min.css';
 * {
   box-sizing: border-box;
 }
@@ -69,6 +70,9 @@ h3 {
   padding: 0 0.5em;
   background-color: #ffffff;
 }
+.article-style .fas {
+  cursor: pointer;
+}
 .list-clean {
   list-style-type: none;
   padding: 0;
@@ -85,6 +89,7 @@ h3 {
 #search-results .results-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 #search-results .results-header .date-header {
   margin: 0;
@@ -93,11 +98,30 @@ h3 {
   font-weight: lighter;
   opacity: 0.8;
 }
+#search-results #toggle-recommended {
+  position: relative;
+  z-index: 2;
+}
+#search-results #toggle-recommended + label {
+  display: inline-block;
+  z-index: 1;
+  padding: 0.2em 1em 0.2em 2em;
+  margin-left: -1.5em;
+  background-color: #dcdcdc;
+  transition: all 0.2s ease;
+}
+#search-results #toggle-recommended:checked + label {
+  color: white;
+  background-color: #abac18;
+}
 #search-results article {
   margin: 1em 0;
   border: 1px solid #5a5a5a;
   padding: 0 0.5em;
   background-color: #ffffff;
+}
+#search-results article .fas {
+  cursor: pointer;
 }
 #search-results article .connection-intro {
   display: flex;
@@ -192,6 +216,9 @@ h3 {
   background-color: #ffffff;
   padding-bottom: 0.5em;
 }
+#search-services article .fas {
+  cursor: pointer;
+}
 #search-services article .connection-intro {
   margin: 0.5em 0;
   padding-bottom: 0.2em;
@@ -281,10 +308,83 @@ h3 {
   font-size: 1.5em;
   color: darkred;
 }
+#search-services .add-segment {
+  background-color: #4d4d21;
+}
 #search-services .next-step {
   display: flex;
   justify-content: center;
   padding: 1em 0 2em 0;
+}
+#confirmation {
+  margin-top: 75px;
+  padding: 0.5em;
+  background-color: #f0f4f0;
+}
+#confirmation .confirmation-header {
+  display: flex;
+  justify-content: space-between;
+}
+#confirmation .confirmation-header .date-header {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  font-weight: lighter;
+  opacity: 0.8;
+}
+#confirmation article {
+  margin: 1em 0;
+  border: 1px solid #5a5a5a;
+  padding: 0 0.5em;
+  background-color: #ffffff;
+  padding-bottom: 1em;
+}
+#confirmation article .fas {
+  cursor: pointer;
+}
+#confirmation article .connection-intro {
+  border-bottom: 1px solid #abac18;
+}
+#confirmation article div.segment .carrier:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform: translateY(2px);
+  margin-right: 0.3em;
+}
+#confirmation article div.segment p {
+  margin: 0.5em 0;
+}
+#confirmation article div.segment ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.2em 0;
+  margin: 0;
+}
+#confirmation article div.segment ul li {
+  padding-left: 1.4em;
+}
+#confirmation article div.segment ul li {
+  padding: 0;
+}
+#confirmation article div.segment ul li time {
+  margin-right: 1em;
+}
+#confirmation article div.segment .line {
+  margin-left: 0.33em;
+  margin-right: 1em;
+  font-weight: 600;
+}
+#confirmation article div.segment .carrier-name {
+  display: block;
+  font-size: 0.9rem;
+  margin-left: 2em;
+}
+#confirmation article .contact input {
+  font-size: 1.1em;
+  margin: 0.2em;
 }
 button {
   font-size: 1em;
