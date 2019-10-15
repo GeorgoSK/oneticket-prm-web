@@ -1,11 +1,8 @@
 $(document).ready(() => {
-	/*
-	$(window).on('scroll', function() {
-		if ($(window).scrollTop() >= 5) {
-			$('#search-inputs').addClass('fixed');
-		} else {
-			$('#search-inputs').removeClass('fixed');
-		}
+	var stationList = [];
+	$.getJSON("js/sr70.json", function(data) {
+		stationList = data.stations;
+		$('.input-fields input').autocomplete({minLength: 0, source: stationList});
 	});
-	*/
+	$('#search-results').hide();
 });
