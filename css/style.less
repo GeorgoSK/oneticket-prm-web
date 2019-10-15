@@ -2,6 +2,7 @@
 
 @sjt-light: rgb(171,172,24);
 @sjt-dark: rgb(77,77,33);
+@border: rgb(90,90,90);
 
 * {
     box-sizing: border-box;
@@ -50,26 +51,44 @@ body {
     }
 }
 
-#search-results {
+.page-container {
     margin-top: 75px;
     padding: 0.5em;
     background-color: rgb(240,244,240);
+}
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    .date-header {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+        font-weight: lighter;
+        opacity: 0.8;
+    }
+}
+.article-style {
+    margin: 1em 0;
+    border: 1px solid @border;
+    padding: 0 0.5em;
+    background-color: rgb(255,255,255);
+}
+.list-clean {
+    list-style-type: none;
+    padding: 0;
+    margin: 0.2em 0;
+    li {
+        padding-left: 1.4em;
+    }
+}
+
+#search-results {
+    .page-container;
     .results-header {
-        display: flex;
-        justify-content: space-between;
-        .date-header {
-            margin: 0;
-            padding: 0;
-            font-size: 2em;
-            font-weight: lighter;
-            opacity: 0.8;
-        }
+        .container-header;
     }
     article {
-        margin: 1em 0;
-        border: 1px solid rgb(90,90,90);
-        padding: 0 0.5em;
-        background-color: rgb(255,255,255);
+        .article-style;
         .connection-intro {
             display: flex;
             justify-content: space-between;
@@ -82,14 +101,9 @@ body {
             }
         }
         ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0.2em 0;
-            li {
-                padding-left: 1.4em;
-                & > * {
-                    margin-right: 1.5em;
-                }
+            .list-clean;
+            li > * {
+                margin-right: 1.5em;
             }
         }
         & > div:not(:last-of-type):not(:empty) {
@@ -132,6 +146,39 @@ body {
             p {
                 margin: 0.1em 0;
             }
+        }
+    }
+}
+
+
+
+#search-services {
+    .page-container;
+    .selection-header {
+        .container-header;
+    }
+    article {
+        .article-style;
+        .connection-intro {
+            margin: 0.5em 0;
+            padding-bottom: 0.2em;
+            border-bottom: 1px solid @sjt-light;
+        }
+        div.segment {
+            display: flex;
+            div {
+                flex-basis: 100%;
+                border-bottom: 1px solid @border;
+                ul {
+                    .list-clean;
+                }
+                input {
+                    font-size: 1.2em;
+                    margin: 0.3em 0;
+                    display: block;
+                }
+            }
+
         }
     }
 }

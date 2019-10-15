@@ -42,6 +42,36 @@ body {
   margin-top: 0.2em;
   border: 0;
 }
+.page-container {
+  margin-top: 75px;
+  padding: 0.5em;
+  background-color: #f0f4f0;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+}
+.container-header .date-header {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  font-weight: lighter;
+  opacity: 0.8;
+}
+.article-style {
+  margin: 1em 0;
+  border: 1px solid #5a5a5a;
+  padding: 0 0.5em;
+  background-color: #ffffff;
+}
+.list-clean {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.2em 0;
+}
+.list-clean li {
+  padding-left: 1.4em;
+}
 #search-results {
   margin-top: 75px;
   padding: 0.5em;
@@ -124,6 +154,53 @@ body {
 }
 #search-results article div p {
   margin: 0.1em 0;
+}
+#search-services {
+  margin-top: 75px;
+  padding: 0.5em;
+  background-color: #f0f4f0;
+}
+#search-services .selection-header {
+  display: flex;
+  justify-content: space-between;
+}
+#search-services .selection-header .date-header {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  font-weight: lighter;
+  opacity: 0.8;
+}
+#search-services article {
+  margin: 1em 0;
+  border: 1px solid #5a5a5a;
+  padding: 0 0.5em;
+  background-color: #ffffff;
+}
+#search-services article .connection-intro {
+  margin: 0.5em 0;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #abac18;
+}
+#search-services article div.segment {
+  display: flex;
+}
+#search-services article div.segment div {
+  flex-basis: 100%;
+  border-bottom: 1px solid #5a5a5a;
+}
+#search-services article div.segment div ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.2em 0;
+}
+#search-services article div.segment div ul li {
+  padding-left: 1.4em;
+}
+#search-services article div.segment div input {
+  font-size: 1.2em;
+  margin: 0.3em 0;
+  display: block;
 }
 button {
   font-size: 1em;
