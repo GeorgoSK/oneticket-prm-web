@@ -9,6 +9,11 @@ body {
   background-color: #212121;
   overflow-x: hidden;
 }
+h2,
+h3 {
+  font-size: 1.1rem;
+  color: #4d4d21;
+}
 #search-inputs {
   padding: 0.5em 0;
   width: 100vw;
@@ -134,13 +139,13 @@ body {
   color: orangered;
 }
 #search-results article div .service:before {
-  display: inline-block;
   content: "";
+  display: inline-block;
   width: 1em;
   height: 1em;
-  position: relative;
-  top: 2px;
-  margin-right: 0.5em;
+  border-radius: 50%;
+  transform: translateY(2px);
+  margin-right: 0.3em;
 }
 #search-results article div .service .line {
   font-weight: bold;
@@ -154,6 +159,15 @@ body {
 }
 #search-results article div p {
   margin: 0.1em 0;
+}
+.carrier-badge {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform: translateY(2px);
+  margin-right: 0.3em;
 }
 #search-services {
   margin-top: 75px;
@@ -176,6 +190,7 @@ body {
   border: 1px solid #5a5a5a;
   padding: 0 0.5em;
   background-color: #ffffff;
+  padding-bottom: 0.5em;
 }
 #search-services article .connection-intro {
   margin: 0.5em 0;
@@ -184,10 +199,6 @@ body {
 }
 #search-services article div.segment {
   display: flex;
-}
-#search-services article div.segment div {
-  flex-basis: 100%;
-  border-bottom: 1px solid #5a5a5a;
 }
 #search-services article div.segment div ul {
   list-style-type: none;
@@ -201,6 +212,79 @@ body {
   font-size: 1.2em;
   margin: 0.3em 0;
   display: block;
+}
+#search-services article div.segment .train-selection {
+  flex-grow: 1;
+  margin: 0 1em;
+  padding: 0 1em;
+  background-color: #f0f4f0;
+}
+#search-services article div.segment .train-selection li {
+  padding: 0.4em 0;
+  display: flex;
+  align-items: baseline;
+}
+#search-services article div.segment .train-selection li:not(:last-child) {
+  border-bottom: 1px dotted #5a5a5a;
+}
+#search-services article div.segment .train-selection li time,
+#search-services article div.segment .train-selection li span {
+  margin-right: 1em;
+}
+#search-services article div.segment .train-selection li time {
+  font-weight: 600;
+}
+#search-services article div.segment .train-selection li .notice {
+  font-size: 0.9rem;
+  color: orangered;
+  flex-grow: 1;
+}
+#search-services article div.segment .train-selection li .carrier:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform: translateY(2px);
+  margin-right: 0.3em;
+}
+#search-services article div.segment .train-selection li button {
+  padding: 0.3em 0.6em;
+  font-size: 1rem;
+  background-color: #4d4d21;
+}
+#search-services article .selected-connection {
+  align-items: center;
+}
+#search-services article .selected-connection div {
+  margin-right: 1em;
+}
+#search-services article .selected-connection div span {
+  margin-right: 1em;
+}
+#search-services article .selected-connection div .line {
+  font-weight: 600;
+}
+#search-services article .selected-connection div .carrier:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform: translateY(2px);
+  margin-right: 0.3em;
+}
+#search-services article .selected-connection div.service-block {
+  flex-grow: 1;
+}
+#search-services article .selected-connection div i {
+  font-size: 1.5em;
+  color: darkred;
+}
+#search-services .next-step {
+  display: flex;
+  justify-content: center;
+  padding: 1em 0 2em 0;
 }
 button {
   font-size: 1em;

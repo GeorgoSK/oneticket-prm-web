@@ -7,6 +7,7 @@
     <title>PRM prototyp</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fa.min.css">
     <script type="application/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="application/javascript" src="js/jquery-ui.min.js"></script>
     <script type="application/javascript" src="js/scripts.js"></script>
@@ -146,43 +147,47 @@
         <p class="date-header">Vybíráte vlaky na <time datetime="2019-10-16">16. října 2019</time></p>
         </div>
         <article>
-            <p class="connection-intro">
+            <h2 class="connection-intro">
                 1. úsek
-            </p>
-            <div class="segment">
+            </h2>
+            <div class="segment selected-connection">
                 <div>
                     <ul>
-                            <li>
-                                <time class="time-dep">18:00</time>
-                                <span class="station">Rožnov pod Radhoštěm</span>
-                                <span class="notes"></span>
-                            </li>
-                            <li>
-                                <time class="time-arr">19:49</time>
-                                <span class="station">Kojetín</span>
-                                <span class="notes"></span>
-                            </li>
-                        </ul>
+                        <li>
+                            <time class="time-dep">18:00</time>
+                            <span class="station">Rožnov pod Radhoštěm</span>
+                            <span class="notes"></span>
+                        </li>
+                        <li>
+                            <time class="time-arr">19:49</time>
+                            <span class="station">Kojetín</span>
+                            <span class="notes"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-block">
+                    <p class="service train"><span class="line">Os 3920</span><span class="carrier carrier-cd">České dráhy</span></p>
                 </div>
                 <div>
-                    <p class="service train carrier-cd"><span class="line">Os 3920</span><span class="carrier">České dráhy</span></p>
+                    <i class="fas fa-trash"></i>
                 </div>
             </div>
         </article>
 
         <article>
-            <p class="connection-intro">
+            <h2 class="connection-intro">
                 2. úsek
-            </p>
+            </h2>
             <div class="segment">
                 <div class="input-fields">
                     <p>Nástupní stanice: <input type="text" name="from[0]" placeholder="Vyhledejte stanici" class="input-station"></p>
                     <p>Výstupní stanice: <input type="text" name="to[0]" placeholder="Vyhledejte stanici" class="input-station"></p>
                 </div>
                 <div class="train-selection">
+                    <h3>Vyberte spoj:</h3>
                     <ul>
-                        <li><time>19:53</time><span class="service-no">R 824</span><span class="carrier">RegioJet</span><span class="notice">Pozor, velmi krátký přestup</span></li>
-                        <li><time>21:53</time><span class="service-no">R 820</span><span class="carrier">RegioJet</span></li>
+                        <li><time>19:53</time><span class="service-no">R 824</span><span class="carrier carrier-rj">RegioJet</span><span class="notice">Pozor, velmi krátký přestup</span><button>Vybrat spoj</button></li>
+                        <li><time>21:53</time><span class="service-no">R 820</span><span class="carrier carrier-rj">RegioJet</span><span class="notice"></span><button>Vybrat spoj</button></li>
                     </ul>
                 </div>
             </div>
