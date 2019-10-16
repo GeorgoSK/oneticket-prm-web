@@ -13,10 +13,17 @@
     <script type="application/javascript" src="js/scripts.js"></script>
 </head>
 <body>
-    <section id="search-inputs">
+    <section id="home">
+        <article>
+            <div><i class="fas fa-wheelchair"></i><br>Objednávka přepravy cestujícího s vozíkem</div>
+            <div><i class="fas fa-hands-helping"></i><br>Objednávka asistence na nádraží</div>
+            <div><i class="fas fa-users"></i><br>Objednávka skupinové přepravy</div>
+        </article>
+    </section>
+    <section id="search-inputs" class="">
         <div class="main">
-            <span>Z<input type="text" size="20" name="from" value="Rožnov pod Radhoštěm"></span>
-            <span>Do<input type="text" size="20" name="to" value="Brno-Židenice"></span>
+            <span>Z<input type="text" size="20" id="search-from" name="from" value="Rožnov pod Radhoštěm"></span>
+            <span>Do<input type="text" size="20" id="search-to" name="to" value="Brno-Židenice"></span>
             <span>Datum<input type="text" size="8" name="date" value="15. 10. 2019"></span>
             <span>Čas<input type="text" size="4" name="date" value="15:30"></span>
             <button type="submit" class="search">Najít spojení</button>
@@ -27,13 +34,16 @@
         <p class="date-header">Úterý <time datetime="2019-10-15">15. října 2019</time></p>
         <p><input type="checkbox" id="toggle-recommended"><label for="toggle-recommended">doporučené spoje</label></p>
         </div>
-        <article>
+        <article id="result-1">
             <p class="connection-intro">
                 <span>odjezd <time class="trip-departure">15:56</time></span>
                 <span>cestovní čas <time datetime="2h 54m">2 h 54 min</time></span>
             </p>
             <div class="segment">
-                <p class="service train carrier-arr"><span class="line">Os 13212</span><span class="carrier">Arriva vlaky</span></p>
+                <p class="service train carrier-arr"><span class="line">Os 13212</span><span class="train-notes"><i
+                            class="fas fa-wheelchair"></i><i class="fas fa-check-double"></i></span><span
+                        class="carrier">Arriva
+                        vlaky</span></p>
                 <ul>
                     <li>
                         <time class="time-dep">15:56</time>
@@ -73,7 +83,9 @@
             </div>
             <div class="transfer"></div>
             <div class="segment">
-                <p class="service train carrier-rj"><span class="line">R 830</span><span class="carrier">RegioJet</span></p>
+                <p class="service train carrier-rj"><span class="line">R 830</span><span class="train-notes"><i
+                            class="fas fa-wheelchair"></i></span><span
+                        class="carrier">RegioJet</span></p>
                 <ul>
                     <li>
                         <time class="time-dep">17:15</time>
@@ -92,13 +104,16 @@
             </div>
         </article>
 
-        <article>
+        <article id="result-2">
                 <p class="connection-intro">
                     <span>odjezd <time class="trip-departure">18:00</time></span>
+                    <span class="recommended"><i class="fas fa-thumbs-up"></i> Doporučené spojení</span>
                     <span>cestovní čas <time datetime="2h 50m">2 h 50 min</time></span>
                 </p>
                 <div class="segment">
-                    <p class="service train carrier-cd"><span class="line">Os 3920</span><span class="carrier">České dráhy</span></p>
+                    <p class="service train carrier-cd"><span class="line">Os 3920</span><span class="train-notes"><i
+                                class="fas fa-wheelchair"></i><i class="fas fa-check-double"></i></span><span
+                            class="carrier">České dráhy</span></p>
                     <ul>
                         <li>
                             <time class="time-dep">18:00</time>
@@ -122,7 +137,9 @@
                     </div>
                 </div>
                 <div class="segment">
-                    <p class="service train carrier-rj"><span class="line">R 820</span><span class="carrier">RegioJet</span></p>
+                    <p class="service train carrier-rj"><span class="line">R 820</span><span class="train-notes"><i
+                                class="fas fa-wheelchair"></i></span><span
+                            class="carrier">RegioJet</span></p>
                     <ul>
                         <li>
                             <time class="time-dep">19:52</time>
@@ -244,11 +261,15 @@
                         </li>
                     </ul>
                 </div>
+                <div class="checklist-box">
+                    <p><i class="fas fa-check"></i> Spojení je vhodné pro vaši cestu</p>
+                </div>
             </div>
-            <div class="journey-timer">
-                <h3>Do vaší cesty zbývá 5 dnů</h3>
-                <p>Definitivní odpověď dostanete do 14. 10. 2019 18:00</p>
+            <h2 class="connection-intro">Do vaší cesty zbývá 5 dnů</h2>
+            <div class="checklist-box">
+                <p><i class="fas fa-check"></i> Odpověď dostanete do 14. 10. 2019 18:00</p>
             </div>
+
             <h2 class="connection-intro">Kontaktní údaje</h2>
             <div class="contact">
                 <table>
@@ -266,7 +287,20 @@
                     </tr>
                 </table>
             </div>
+            <div class="checklist-box">
+                <p><i class="fas fa-check"></i> Kontaktní údaje jsou vyplněny</p>
+            </div>
+            <div class="ack">
+                <p><input type="checkbox" id="ack-tix"><label for="ack-tix">Potvrzuji, že mám v úmyslu zakoupit si
+                        jízdní doklad pro vybrané spojení, nebo že jízdní doklad pro toto spojení už mám
+                        zakoupený.</label></p>
+                <p><input type="checkbox" id="ack-tc"><label for="ack-tc">Souhlasím s Podmínkami užití aplikace
+                        OneTicket.PRM</label></p>
+            </div>
         </article>
+        <div class="next-step action">
+            <button type="button">Objednat cestu</button>
+        </div>
     </section>
 </body>
 </html>

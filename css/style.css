@@ -15,18 +15,43 @@ h3 {
   font-size: 1.1rem;
   color: #4d4d21;
 }
+#home {
+  height: calc(100vh - 120px);
+}
+#home article {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+#home article div {
+  flex-basis: 33%;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2em 0;
+}
+#home article div i {
+  font-size: 6rem;
+  padding: 1em 0;
+}
 #search-inputs {
   padding: 0.5em 0;
   width: 100vw;
   background-color: #4d4d21;
-  position: fixed;
+  position: relative;
   z-index: 2;
-  top: 0;
   margin-left: 50%;
   left: -50vw;
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
+}
+#search-inputs.fixed {
+  top: 0;
+  position: fixed;
 }
 #search-inputs.fixed {
   position: fixed;
@@ -183,6 +208,30 @@ h3 {
 }
 #search-results article div p {
   margin: 0.1em 0;
+}
+#search-results article div .train-notes {
+  padding-left: 1em;
+}
+#search-results article .recommended {
+  visibility: hidden;
+}
+#search-results .suggested {
+  border-color: green;
+  position: relative;
+}
+#search-results .suggested .recommended {
+  visibility: visible;
+}
+#search-results .suggested:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 1.5em solid transparent;
+  border-left: 1.5em solid green;
+  border-bottom: 1.5em solid green;
 }
 .carrier-badge {
   content: "";
@@ -385,6 +434,43 @@ h3 {
 #confirmation article .contact input {
   font-size: 1.1em;
   margin: 0.2em;
+}
+#confirmation article .ack p {
+  display: flex;
+  width: 100%;
+}
+#confirmation article .ack label {
+  margin-left: -1.1em;
+  padding: 0.5em 1em 0.5em 1.5em;
+  cursor: pointer;
+  z-index: 0;
+  border-radius: 0.4em;
+  border: 1px solid #5a5a5a;
+}
+#confirmation article .ack input {
+  position: relative;
+  margin: 1em 0 0 0;
+  z-index: 1;
+}
+#confirmation article .ack input:checked + label {
+  background-color: green;
+  color: white;
+}
+#confirmation article .checklist-box {
+  display: flex;
+  justify-content: center;
+}
+#confirmation article .checklist-box p {
+  margin: 0 auto;
+  padding: 0.3em 1em;
+  background-color: green;
+  border-radius: 1em;
+  color: white;
+}
+#confirmation .next-step {
+  border-top: 1px solid #dcdcdc;
+  padding: 1em 0;
+  text-align: center;
 }
 button {
   font-size: 1em;
